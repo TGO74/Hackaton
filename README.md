@@ -85,6 +85,140 @@ Este proyecto es un sistema web diseñado para gestionar el registro y la partic
     - Ver todos los participantes registrados.
     - Asignar fechas, bloquear o eliminar participantes.
     - Usar acciones en bloque para gestionar múltiples participantes de manera eficiente.
+  
+## Packages y Clases
+Paquete: com.gestion.hackathon.controller
+RegistroParticipanteServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doGet(HttpServletRequest request, HttpServletResponse response)
+doPost(HttpServletRequest request, HttpServletResponse response)
+IngresoParticipanteServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doGet(HttpServletRequest request, HttpServletResponse response)
+doPost(HttpServletRequest request, HttpServletResponse response)
+PerfilParticipanteServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doGet(HttpServletRequest request, HttpServletResponse response)
+doPost(HttpServletRequest request, HttpServletResponse response)
+ActualizarContactoServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doGet(HttpServletRequest request, HttpServletResponse response)
+doPost(HttpServletRequest request, HttpServletResponse response)
+IngresoSupervisorServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doGet(HttpServletRequest request, HttpServletResponse response)
+doPost(HttpServletRequest request, HttpServletResponse response)
+AdministradorServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doGet(HttpServletRequest request, HttpServletResponse response)
+doPost(HttpServletRequest request, HttpServletResponse response)
+EliminarParticipanteServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doPost(HttpServletRequest request, HttpServletResponse response)
+BloquearParticipanteServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doPost(HttpServletRequest request, HttpServletResponse response)
+AsignarFechaServlet
+
+Atributos:
+Ninguno específico
+Métodos:
+doPost(HttpServletRequest request, HttpServletResponse response)
+Paquete: com.gestion.hackathon.model
+Participante
+
+Atributos:
+String nombreCompleto
+String contrasena
+String correo
+String numeroContacto
+String rut
+String fechaAsignada
+String codigo
+Métodos:
+Getters y setters para cada atributo
+Supervisor
+
+Atributos:
+String correo
+String contrasena
+Métodos:
+Getters y setters para cada atributo
+Paquete: com.gestion.hackathon.model.dao
+ParticipanteDAO
+
+Atributos:
+DSLContext create
+Métodos:
+public void registrarParticipante(Participante participante)
+public Participante obtenerParticipantePorCorreo(String correo)
+public void actualizarContacto(String correo, String nuevoContacto)
+public List<Participante> obtenerTodosLosParticipantes()
+public void eliminarParticipante(String correo)
+public void bloquearParticipante(String correo)
+public void asignarFecha(String correo, String fecha)
+SupervisorDAO
+
+Atributos:
+DSLContext create
+Métodos:
+public Supervisor obtenerSupervisorPorCorreo(String correo)
+Paquete: com.gestion.hackathon.utils
+DBConnector
+
+Atributos:
+String url
+String user
+String password
+Métodos:
+public static DSLContext getConnection()
+PasswordUtils
+
+Atributos:
+Ninguno
+Métodos:
+public static String hashPassword(String password)
+public static boolean checkPassword(String password, String hashedPassword)
+Estructura de la Base de Datos
+Tabla: participantes
+Columnas:
+id (INT, PRIMARY KEY, AUTO_INCREMENT)
+nombre_completo (VARCHAR)
+contrasena (VARCHAR)
+correo (VARCHAR)
+numero_contacto (VARCHAR)
+rut (VARCHAR)
+fecha_asignada (VARCHAR)
+codigo (VARCHAR)
+Tabla: supervisores
+Columnas:
+id (INT, PRIMARY KEY, AUTO_INCREMENT)
+correo (VARCHAR)
+contrasena (VARCHAR)
 
 ## Capturas de Pantalla
 

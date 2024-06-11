@@ -88,7 +88,9 @@ Este proyecto es un sistema web diseñado para gestionar el registro y la partic
 
 ## Capturas de Pantalla
 
-*Incluye capturas de pantalla relevantes de la aplicación aquí, como la página de registro, la página de inicio de sesión, la página de perfil, la página de administrador, etc.*
+*Incluye capturas de pantalla*
+
+## Diagrama de clases
 
 ## Contribuyendo
 
@@ -103,5 +105,3 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE
 Para cualquier consulta o comentario, por favor contáctanos en [correo@example.com](mailto:correo@example.com).
 
 ---
-
-¡Gracias por usar el Sistema de Gestión de Participantes en Hackathon! Esperamos que ayude a hacer de tu evento de hackathon un éxito.
